@@ -1,89 +1,85 @@
-# 💹 BudgetAI — AI-Powered Budget Tracker
+# 🧠 FIN-IQ — Neural Financial Intelligence
 
-A professional personal finance tracker powered by **Claude AI**, built with **Next.js 14**.
-
-## ✨ Features
-
-- 📊 **Dashboard** — Balance, income, expenses, budget progress, donut chart, bar chart
-- 📋 **Transactions** — Add / delete income & expenses, filter by category
-- 🤖 **AI Insights** — Claude AI analyzes your spending and gives personalized advice
-- 📱 **Responsive** — Works on mobile and desktop
+FIN-IQ is a premium, AI-driven financial intelligence dashboard designed to provide deep insights into personal wealth management. Leveraging the power of **Llama 3.3 via Groq**, it transforms raw transaction data into actionable cognitive analysis, wrapped in a stunning glassmorphic interface.
 
 ---
 
-## 🚀 Deploy to Vercel (3 steps)
+## 🚀 Tech Stack
 
-### Step 1 — Push to GitHub
+- **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **AI Engine:** [Llama 3.3](https://groq.com/) (via Groq SDK)
+- **Visualization:** [Recharts](https://recharts.org/)
+- **Reporting:** [jsPDF](https://github.com/parallax/jsPDF) & [jsPDF-AutoTable](https://github.com/simonbengtsson/jsPDF-AutoTable)
+- **Icons & Motion:** [Lucide React](https://lucide.dev/) & [Framer Motion](https://www.framer.com/motion/)
+
+---
+
+## ✨ Core Features
+
+### 🤖 AI Cognitive Analysis
+Harness the power of Llama 3.3 to analyze your spending habits. FIN-IQ doesn't just track numbers; it understands them, providing personalized financial advice and identifying potential savings.
+
+### 📈 Historical Trend Mapping
+Visualize your financial journey with dynamic, interactive charts powered by Recharts. Track income vs. expenses over time and monitor category-wise distribution with precision.
+
+### 💎 Glassmorphism UI
+Experience a state-of-the-art interface featuring sleek glassmorphic components, subtle micro-animations, and a responsive design that feels premium on any device.
+
+### 📄 PDF Ledger Export
+Generate professional financial reports with a single click. Export your transaction history into a beautifully formatted PDF ledger for offline tracking or tax purposes.
+
+---
+
+## 🛠️ Setup Instructions
+
+### 1. Clone the repository
 ```bash
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/budget-ai.git
-git push -u origin main
+git clone https://github.com/your-username/budget-ai.git
+cd budget-ai
 ```
 
-### Step 2 — Import on Vercel
-1. Go to [vercel.com](https://vercel.com)
-2. Click **"Add New Project"**
-3. Import your GitHub repo
-4. Click **Deploy**
-
-### Step 3 — Add API Key (for AI Insights)
-1. In Vercel dashboard → your project → **Settings → Environment Variables**
-2. Add:
-   - **Name:** `GROQ_API_KEY`
-   - **Value:** your Groq API key from [console.groq.com](https://console.groq.com)
-3. Click **Save** → go to **Deployments** → **Redeploy**
-
-Done! ✅
-
----
-
-## 💻 Run Locally
-
+### 2. Install dependencies
 ```bash
 npm install
 ```
 
-Create a `.env.local` file:
+### 3. Configure Environment Variables
+Create a `.env.local` file in the root directory and add your Groq API Key:
+```env
+GROQ_API_KEY=your_groq_api_key_here
 ```
-ANTHROPIC_API_KEY=your_api_key_here
-```
+> [!NOTE]
+> You can obtain an API key from the [Groq Console](https://console.groq.com/).
 
+### 4. Run the Development Server
 ```bash
 npm run dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ---
 
 ## 🗂️ Project Structure
 
-```
+```text
 budget-ai/
 ├── app/
-│   ├── layout.js          # Root layout
-│   ├── page.js            # Main app (Dashboard, Transactions, AI Insights)
-│   └── api/
-│       └── insights/
-│           └── route.js   # Claude AI API route
-├── .gitignore
-├── next.config.js
-├── package.json
-└── README.md
+│   ├── api/             # Backend API routes (AI Integration)
+│   ├── components/      # Reusable UI components (Glassmorphic)
+│   ├── context/         # React Context for state management
+│   ├── layout.js        # Root layout with premium fonts
+│   └── page.js          # Main Dashboard & Intelligence Hub
+├── public/              # Static assets
+├── .env.local           # Environment secrets
+├── next.config.js       # Next.js configuration
+└── package.json         # Project dependencies
 ```
 
 ---
 
-## 🔑 Get Anthropic API Key
+## 🛡️ License
 
-1. Go to [console.anthropic.com](https://console.anthropic.com)
-2. Sign up / Log in
-3. Go to **API Keys** → **Create Key**
-4. Copy and paste into Vercel environment variables
+Distributed under the MIT License. See `LICENSE` for more information.
 
----
-
-Built with ❤️ using Next.js + Claude AI
+Built with ✨ by [Antigravity](https://github.com/antigravity-ai)
